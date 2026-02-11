@@ -1,0 +1,8 @@
+version: '3'
+services:
+  bot:
+    build: .  # 同じフォルダのDockerfileを使ってビルドする指示
+    container_name: my-discord-bot-live
+    restart: always
+    environment:
+      - DISCORD_TOKEN=ここにトークンを入れる
