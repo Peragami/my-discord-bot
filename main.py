@@ -31,6 +31,10 @@ async def on_ready():
 async def hello(interaction: discord.Interaction):
     await interaction.response.send_message("Hello! スラッシュコマンドが成功したよ！")
 
+@bot.tree.command(name="help", description="ヘルプ")
+async def hello(interaction: discord.Interaction):
+    await interaction.response.send_message("t!pで再生、キューの追加。t!sで再生停止、t!nでスキップ！")
+
 @bot.tree.command(name="ping", description="Botの応答速度を確認します")
 async def ping(interaction: discord.Interaction):
     latency_ms = round(bot.latency * 1000)
